@@ -1,0 +1,27 @@
+<div class="light-section">
+
+    <div class="container m-5 row">
+        <div class="box col-md-6 align-items-center p-5" id="img">
+            <img class="large-img-size" src="assets/oilBottle.png" alt="Card image cap">
+        </div>
+        <div class="col-md-6 pb-4">
+            <h1 class="pt-5">{{ oilData.name }}</h1>
+            <br>
+            <h3>Quantity : {{ oilData.quantity }}</h3>
+            <br>
+            <h3>Price: {{ oilData.price }} </h3>
+
+            <button type="button"
+                class="btn btn-primary mr-4"
+                (click)="editOil(oilData.id)">
+                Edit
+            </button>
+            <button type="button"
+                class="btn btn-warning"
+                (click)="deleteOil(oilData.id)">
+                Delete
+            </button>
+        </div>
+    </div>
+</div>
+  

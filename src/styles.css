@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.dark-section {
+  background-color: rgb(245, 212, 48);
+}
+
+.light-section {
+  background-color: rgb(242, 242, 201);
+}
+
+.justify-text {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.card-width {
+    width: 1rem;
+}
+
+.curves {
+    border-radius: 25px;
+}
+
+.no-link-style {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+.no-link-style:hover {
+    cursor: pointer;
+}
+
+.shadow-hover {
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+  }
+  
+.shadow-hover:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.fixed-size {
+    width: 180px; /* Fixed width */
+    height: 180px; /* Fixed height */
+    object-fit: contain; /* Ensure the image fits within the box while maintaining aspect ratio */
+  }
+
+.large-img-size {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+
+  .small-size {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }

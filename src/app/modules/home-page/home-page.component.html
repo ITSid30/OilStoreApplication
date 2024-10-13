@@ -1,0 +1,61 @@
+<div class="light-section">
+
+    <!-- <nav class="dark-section p-4 d-flex fixed">
+      <h1>Pureza Oils</h1>
+      <div class="ml-auto">
+      <a href="#" class="p-2">Home</a>
+      <a href="#" class="p-2">Products</a>
+      <a href="#" class="p-2">About</a>
+      </div>
+    </nav> -->
+
+    <div class="row p-2">
+      <div class="pr-4 col-12 text-right">
+        <button type="button"
+            (click)="addNewOil()"
+            class="btn btn-primary">
+          Add New Oil
+        </button>
+      </div>
+    </div>
+  
+    <div id="productsList" class="mx-4">
+      <h3>Our Products</h3>
+      <!-- List of products -->
+       <div class="row">
+      <div *ngFor="let oil of oils"
+          class="col-12 col-sm-6 col-md-3 mb-4">
+          <!-- <a [title]="oil.name" [routerLink]="['/oils', oil.id]">{{ oil.name }}</a> -->
+        <div class="card curves p-3 align-items-center shadow-hover">
+          <div (click)="getSingleOil(oil.id)">
+          <div class="box text-center">
+          <img class="fixed-size" src="assets/oilBottle.png" alt="Card image cap">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ oil.name }}</h5>
+            <p class="card-text justify-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="card-text flex">
+              <p>Quantity: {{ oil.quantity }}</p>
+              <p class="ml-auto">Price: Rs. {{ oil.price }}</p>
+            </div>
+            <!-- <p class="card-text">Price: Rs. {{ oil.price }}</p> -->
+          </div>
+          </div>
+          <div class="card-footer">
+            <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+             <button type="button" 
+                class="btn btn-primary mr-4"
+                (click)="editOil(oil)">
+              Edit
+             </button>
+             <button type="button" 
+                class="btn btn-warning"
+                (click)="deleteOil(oil.id)">
+              Delete
+             </button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>

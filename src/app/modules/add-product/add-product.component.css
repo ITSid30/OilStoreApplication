@@ -1,0 +1,5 @@
+mat-form-field {
+    display: block;
+    width: 100%; /* Ensures the field takes full width */
+    margin-bottom: 16px; /* Adds spacing between fields */
+  }
